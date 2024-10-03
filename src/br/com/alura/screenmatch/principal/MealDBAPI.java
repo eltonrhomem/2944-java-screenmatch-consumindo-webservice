@@ -12,8 +12,9 @@ public class MealDBAPI {
         System.out.println("Digite o nome do prato: ");
         Scanner scanner = new Scanner(System.in);
         String nomeDoPrato = scanner.nextLine();
+        final String chaveAPI = "1";
 
-        String endereco = String.format("http://www.themealdb.com/api/json/v1/1/search.php?s=%s", nomeDoPrato);
+        String endereco = String.format("http://www.themealdb.com/api/json/v1/%s/search.php?s=%s", chaveAPI, nomeDoPrato);
 
         HttpClient client = HttpClient.newHttpClient();
 
